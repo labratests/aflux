@@ -1,0 +1,126 @@
+prefix crm:  <http://erlangen-crm.org/current/>
+prefix efr:  <http://erlangen-crm.org/efrbroo/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix :     <http://example.org/>
+prefix afl: <http://example.org/afl/>
+
+select ?person 
+       ?externalId 
+       ?idType 
+       ?internalId 
+       ?name 
+       ?alternativeTitle 
+       ?alternativeNum 
+       ?birthPlace
+       ?birthDate
+       ?deathPlace
+       ?deathDate
+       ?profession
+       ?activity
+ where {
+  ?person rdf:type crm:E21_Person .
+
+  # External Identifier
+  OPTIONAL { 
+    ?person crm:P48_has_prefered_identifier [ 
+     rdf:type crm:E42_Identifier ;  
+     rdfs:label "identifier" ;
+     crm:P2_has_type [ 
+        rdf:type   crm:E55_Type ;
+        afl:value  ?idType
+     ] ;
+     afl:value ?externalId 
+    ] 
+  }
+
+  # Internal Identifier
+  OPTIONAL { 
+    ?person crm:P67i_is_refered_to_by [ 
+     rdf:type crm:E89_Propositional_object ;  
+     crm:P48_has_prefered_identifier [ 
+        rdf:type   crm:E42_Identifier ;
+        rdfs:label "AFL_identifier" ;
+        afl:value  ?internalId
+     ] ;
+    ] 
+  }
+
+
+  # Name
+  OPTIONAL { 
+    ?person crm:P131_is_identified_by [ 
+     rdf:type crm:E82_Actor_appellation ;  
+      efr:R8_consists_of [
+          rdfs:label "name" ;
+          afl:value ?name 
+      ]
+  ] . 
+  }
+
+  # Alternative title
+  OPTIONAL {
+  ?person crm:P131_is_identified_by [ 
+    rdf:type crm:E82_Actor_appellation ;  
+    crm:P139_has_alternative_form [ 
+      efr:R8_consists_of [
+          rdfs:label "alternative_title" ;
+          afl:value ?alternativeTitle
+      ]
+  ]] .
+  }
+
+  # Alternative numeration 
+  OPTIONAL {
+   ?person crm:P131_is_identified_by [ 
+    rdf:type crm:E82_Actor_appellation ;
+    crm:P139_has_alternative_form [ 
+       efr:R8_consists_of [
+        rdfs:label "alternative_numeration" ;
+        afl:value ?alternativeNum
+       ]
+  ]] .
+  }
+
+  # Birth date and place
+  OPTIONAL {
+   ?person crm:P98_was_born [ 
+    rdf:type crm:E67_Birth ;
+    crm:P7_took_place_at [ afl:value ?birthPlace ] ;
+    crm:P4_has_time_span [ afl:value ?birthDate ]
+   ] .
+  }
+
+  # Death date and place
+  OPTIONAL {
+   ?person crm:P100_died_in [ 
+    rdf:type crm:E69_Death ;
+    crm:P7_took_place_at [ afl:value ?deathPlace ] ;
+    crm:P4_has_time_span [ afl:value ?deathDate ]
+   ] .
+  }
+
+  # Profession
+  OPTIONAL {
+   ?person crm:P14_performed [ 
+    rdf:type crm:E7_Activity ;
+    crm:P2_has_type [ 
+        rdf:type crm:E55_Type ;
+        rdfs:label "profession" ;
+        afl:value ?profession
+     ] ;
+   ] .
+  }    
+
+  # Activity
+  OPTIONAL {
+   ?person crm:P14_performed [ 
+    rdf:type crm:E7_Activity ;
+    crm:P2_has_type [ 
+        rdf:type crm:E55_Type ;
+        rdfs:label "Type of activity" ;
+        afl:value ?activity
+     ] ;
+   ] .
+  }      
+}
