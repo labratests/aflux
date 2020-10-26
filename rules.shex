@@ -3,6 +3,7 @@ prefix efr: <http://erlangen-crm.org/efrbroo/>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix afl: <http://example.org/afl/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 afl:Person {
     rdf:type                        [ crm:E21_Person ] ;
@@ -39,47 +40,61 @@ afl:AFL_Identifier {
 
 afl:Type {
     rdf:type [ crm:E55_Type ] ;
-    crm:P71_is_listed_in {
+    crm:P71_is_listed_in @afl:Authority_document ;
+    afl:value .
+}
+
+afl:Authority_document {
       rdf:type   [ crm:E32_Authority_document ] ;
       rdfs:label [ "authority_file" ]
-    };
-    afl:value .
 }
 
 afl:Name {
     rdf:type [ crm:E82_Actor_appellation ] ;
-    efr:R8_consists_of {
-        rdf:type   [ crm:E90_Symbolic_Object ];
-        rdfs:label [ "name" ] ;
-        crm:P2_has_type {
-          rdf:type   [ crm:E55_Type ] ;
-          rdfs:label [ "type_of_name"]
-        } ;
-        afl:value .
-    }
+    efr:R8_consists_of @afl:Symbol_name 
 }
+
+afl:Symbol_name {
+    rdf:type   [ crm:E90_Symbolic_Object ];
+    rdfs:label [ "name" ] ;
+    crm:P2_has_type @afl:Type_of_name ;
+    afl:value .
+}
+
+afl:Type_of_name {
+    rdf:type   [ crm:E55_Type ] ;
+    rdfs:label [ "type_of_name"]
+} 
 
 afl:AlternativeTitle {
     rdf:type [ crm:E82_Actor_appellation ] ;
-    crm:P139_has_alternative_form {
-      efr:R8_consists_of {
-        rdf:type   [ crm:E90_Symbolic_Object ];
-        rdfs:label [ "alternative_title" ] ;
-        afl:value .
-      }
-    }
+    crm:P139_has_alternative_form @afl:AlternativeTitleForm 
+}
+
+afl:AlternativeTitleForm {
+      efr:R8_consists_of @afl:SymbolAlternativeTitle
+}
+
+afl:SymbolAlternativeTitle {
+    rdf:type   [ crm:E90_Symbolic_Object ];
+    rdfs:label [ "alternative_title" ] ;
+    afl:value .
 }
 
 afl:AlternativeNumeration {
     rdf:type [ crm:E82_Actor_appellation ] ;
-    crm:P139_has_alternative_form {
-      efr:R8_consists_of {
-        rdf:type   [ crm:E90_Symbolic_Object ];
-        rdfs:label [ "alternative_numeration" ] ;
-        afl:value .
-      }
-    }
+    crm:P139_has_alternative_form @afl:AlternativeNumerationForm 
 }
+
+afl:AlternativeNumerationForm {
+      efr:R8_consists_of @afl:SymbolAlternativeNumeration
+}
+
+afl:SymbolAlternativeNumeration {
+    rdf:type   [ crm:E90_Symbolic_Object ];
+    rdfs:label [ "alternative_numeration" ] ;
+    afl:value .
+}    
 
 afl:Gender {
     rdf:type                  [ crm:E55_Type ] ;
@@ -92,24 +107,26 @@ afl:Gender {
 
 afl:Activity {
     rdf:type                  [ crm:E7_Activity ]    ;
-    crm:P2_has_type           {
+    crm:P2_has_type           @afl:TypeOfActivity ;
+    crm:P4_has_time_span      @afl:Time_Span   * ;
+}
+
+afl:TypeOfActivity {
         rdf:type   [ crm:E55_Type ] ;
         rdfs:label [ "Type of activity" ]
-    }  ;
-    crm:P4_has_time_span      @afl:E52_Time_Span   * ;
-}
+} 
 
 afl:Document {
     rdf:type                  [ crm:E31_Document ]    ;
     crm:P2_has_type           @afl:Type_of_source  * ;
-    crm:P4_has_time_span      @afl:E52_Time_Span   * ;
+    crm:P4_has_time_span      @afl:Time_Span   * ;
 }
 
 
 afl:Profession {
     rdf:type                  [ crm:E7_Activity ]    ;
     crm:P2_has_type           @afl:ProfessionType * ;
-    crm:P4_has_time_span      @afl:E52_Time_Span   * ;
+    crm:P4_has_time_span      @afl:Time_Span   * ;
 }
 
 afl:ProfessionType {
@@ -123,22 +140,12 @@ afl:Type_of_source {
     rdfs:label                [ "type_of_source" ] ;
 }
 
-afl:E31_Document {
-    rdf:type                  [ crm:E31_Document ]    ;
-    crm:P2_has_type           @afl:E55_Type        * ;
-}
-
 afl:Time_Span {
     rdf:type                  [ crm:E52_Time ] ;
 }
 
 afl:Place {
     rdf:type                  [ crm:E53_Place ] ;
-}
-
-afl:E55_Type {
-    rdf:type                  [ crm:E55_Type ] ;
-    crm:P127_has_broader_type @afl:E55_Type *
 }
 
 afl:Birth {
@@ -151,16 +158,4 @@ afl:Death {
     rdf:type                 [ crm:E69_Death ]    ;
     crm:P7_took_place_at     @afl:Place     ? ;
     crm:P4_has_time_span     @afl:Time_Span * ;
-}
-
-
-afl:E82_Actor_appellation {
-    rdf:type                  [ crm:E82_Actor_appellation ] ;
-    efr:R8_consists_of        @afl:E90_Symbolic_Object * ;
-}
-
-afl:E90_Symbolic_Object {
-    rdf:type                  [ crm:E90_Symbolic_Object ] ;
-    crm:P2_has_type           @afl:E55_Type               ;
-    afl:value                 .
 }
