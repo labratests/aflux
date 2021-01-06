@@ -1,0 +1,158 @@
+prefix crm:  <http://erlangen-crm.org/current/>
+prefix efr:  <http://erlangen-crm.org/efrbroo/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix :     <http://example.org/>
+prefix afl:  <http://example.org/afl/>
+
+:e1            rdf:type                        crm:E21_Person ;
+ crm:P48_has_prefered_identifier [
+  rdf:type                        crm:E42_Identifier    ;
+  rdfs:label                      "identifier"          ;
+  crm:P2_has_type                 :isni                 ;
+  afl:value                       "0000 0003 8244 0415" 
+ ] ;
+crm:P48_has_prefered_identifier [
+ rdf:type                        crm:E42_Identifier    ;
+ rdfs:label                      "identifier"          ;
+ crm:P2_has_type                 :viaf                 ;
+ afl:value                       "264499494"           
+] ;
+ crm:P131_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  efr:R8_consists_of [
+   rdf:type crm:E90_Symbolic_Object ;
+   rdfs:label "name" ;
+   crm:P2_has_type afl:direct ;
+   afl:value "Charlotte" 
+  ]
+ ] ;
+ crm:P131_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  efr:R8_consists_of [ 
+   rdf:type crm:E90_Symbolic_Object ;
+   rdfs:label "title" ;
+   crm:P2_has_type afl:free_text ;
+   afl:value "Grande-Duchesse de Luxembourg" 
+  ]
+ ] ;
+ crm:P131_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  crm:P139_has_alternative_form [
+   rdf:type           crm:E82_Actor_appellation ;
+   efr:R8_consists_of [
+    rdf:type crm:E90_Symbolic_Object ;
+    rdfs:label "alternative_title" ;
+    crm:P2_has_type afl:free_text ;
+    afl:value "Duchesse de Nassau" 
+   ] 
+  ] 
+ ] ;
+ crm:P131_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  crm:P139_has_alternative_form [
+   rdf:type           crm:E82_Actor_appellation ;
+   efr:R8_consists_of [
+    rdf:type crm:E90_Symbolic_Object ;
+    rdfs:label "alternative_title" ;
+    crm:P2_has_type afl:free_text ;
+    afl:value "Großherzogin von Luxemburg" 
+   ]
+  ]
+ ] ; 
+ crm:P131_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  crm:P139_has_alternative_form [
+   rdf:type           crm:E82_Actor_appellation ;
+   efr:R8_consists_of [
+    rdf:type crm:E90_Symbolic_Object ;
+    rdfs:label "alternative_title" ;
+    crm:P2_has_type afl:free_text ;
+    afl:value "Herzogin von Nassau" 
+   ]
+  ]
+ ] ;
+ crm:P131_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  crm:P139_has_alternative_form [
+   rdf:type           crm:E82_Actor_appellation ;
+   efr:R8_consists_of [
+    rdf:type crm:E90_Symbolic_Object ;
+    rdfs:label "alternative_name" ;
+    crm:P2_has_type afl:indirect ;
+    afl:value "Nassau, Charlotte Adelgonde Élisabeth Marie Wilhelmine de" 
+   ]
+  ]
+ ] ;
+ crm:P98_was_born [
+  rdf:type             crm:E67_Birth ;  
+  crm:P7_took_place_at :Luxembourg ;
+  crm:P4_has_time_span [
+    rdf:type   crm:E52_Time-Span ;
+    rdfs:label "date of birth" ;
+    afl:value  "1896-01-23" 
+  ] 
+ ] ;
+ crm:P100_died_in [
+  rdf:type             crm:E69_Death ;
+  crm:P7_took_place_at :Luxembourg ;
+  crm:P4_has_time_span [
+   rdf:type   crm:E52_Time-Span ;
+   rdfs:label "date of death" ;
+   afl:value  "1985-07-09" 
+  ]
+ ] ;
+ crm:P2_has_type                 :female ;              # Gender 
+ crm:P14_performed [
+  rdf:type    crm:E7_Activity        ;
+  crm:P2_has_type  [
+   rdf:type   crm:E55_Type           ;
+   rdfs:label "Type of activity"     ;
+   afl:value  "Grande-Duchesse de Luxembourg" 
+  ] ;
+  crm:P4_has_time_span [
+   rdf:type   crm:E52_Time-Span ;
+   afl:value  "1919-1964"       
+  ]
+ ] ;
+ crm:crm:P70i_is_documented_in [
+   rdf:type  crm:E31_Document ; 
+   afl:value "lb.wikipedia.org, consulté le 21.02.2020" 
+ ]  
+.
+
+:isni             rdf:type                        crm:E55_Type          ;
+                  crm:P71_is_listed_in            :afl_authorities      ;
+                  afl:value                       "ISNI"       .
+:viaf             rdf:type                        crm:E55_Type          ;
+                  crm:P71_is_listed_in            :afl_authorities      ;
+                  afl:value                       "VIAF"       .
+
+:afl_authorities  rdf:type                        crm:E32_Authority_document ;
+                  rdfs:label                     "AFL Autrhorities" .
+
+:male            rdf:type                         crm:E55_Type ;
+                 rdfs:label                       "gender"     ;
+                 afl:value                        1            .
+:female          rdf:type                         crm:E55_Type ;
+                 rdfs:label                       "gender"     ;
+                 afl:value                        2            .
+
+
+:Luxembourg rdf:type crm:E53_Place ;
+            rdfs:label "place of birth" ;
+            afl:value "Luxembourg"  .
+
+afl:direct   rdf:type   crm:E55_Type ;
+             rdfs:label "Direct order"@en ;
+             rdfs:label "Direkte Folge"@de ;
+             rdfs:label "ordre direct"@fr  ;
+             afl:value "0" .  
+afl:indirect rdf:type   crm:E55_Type ;
+             rdfs:label "Indirect order"@en  ;
+             rdfs:label "Indirekte Folge"@de ;
+             rdfs:label "ordre indirect"@fr ;
+             afl:value "1" .             
+
+# Some values in the rules are "Only roman numbers till XXX"
+afl:controlled_list rdf:type   crm:E55_Type .  

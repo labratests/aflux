@@ -10,8 +10,10 @@ select ?person
        ?idType 
        ?internalId 
        ?name 
+       ?title
        ?alternativeTitle 
        ?alternativeNum 
+       ?alternativeName
        ?birthPlace
        ?birthDate
        ?deathPlace
@@ -58,6 +60,16 @@ select ?person
   ] . 
   }
 
+  # Title
+  OPTIONAL {
+  ?person crm:P131_is_identified_by [ 
+    rdf:type crm:E82_Actor_appellation ;  
+      efr:R8_consists_of [
+          rdfs:label "title" ;
+          afl:value ?title
+  ]] .
+  }
+
   # Alternative title
   OPTIONAL {
   ?person crm:P131_is_identified_by [ 
@@ -79,6 +91,18 @@ select ?person
         rdfs:label "alternative_numeration" ;
         afl:value ?alternativeNum
        ]
+  ]] .
+  }
+
+  # Alternative name
+  OPTIONAL {
+  ?person crm:P131_is_identified_by [ 
+    rdf:type crm:E82_Actor_appellation ;  
+    crm:P139_has_alternative_form [ 
+      efr:R8_consists_of [
+          rdfs:label "alternative_name" ;
+          afl:value ?alternativeName
+      ]
   ]] .
   }
 

@@ -1,3 +1,5 @@
+## Automated attempt
+
 prefix crm: <http://erlangen-crm.org/current/>
 prefix efr: <http://erlangen-crm.org/efrbroo/>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -9,15 +11,26 @@ afl:Person {
     rdf:type                        [ crm:E21_Person ] ;
     crm:P48_has_prefered_identifier @afl:ExternalStandardIdentifier ;
     crm:P67i_is_refered_to_by       @afl:InternalStandardIdentifier ;
-    crm:P1_is_identified_by       @afl:Name   ;
-    crm:P1_is_identified_by       @afl:AlternativeTitle   ;
-    crm:P1_is_identified_by       @afl:AlternativeNumeration   ;
+    crm:P1_is_identified_by         @afl:ActorAppellation_HeadingName   ;
+    crm:P1_is_identified_by         @afl:AlternativeTitle   ;
+    crm:P131_is_identified_by       @afl:AlternativeNumeration   ;
     crm:P98_was_born                @afl:Birth             * ;
     crm:P100_died_in                @afl:Death             * ;
     crm:P2_has_type                 @afl:Gender                * ; # gender defined as P2_has_type 
     crm:P14_performed               @afl:Profession            * ;
     crm:P14_performed               @afl:Activity              * ;
   #    crm:P70_is_documented     @afl:Document              * ;
+}
+
+afl:ActorApellation_HeadingName {
+    rdf:type [ crm:E82_Actor_appellation ] ;
+    efr:R8_consists_of @afl:SymbolicObject_HeadingName
+}
+
+afl:SymbolicObjectHeadingName {
+    rdf:type   [ crm:E90_Symbolic_Object ];
+    rdfs:label [ "name" ] ;
+    afl:value .
 }
 
 afl:ExternalStandardIdentifier {
