@@ -665,7 +665,7 @@ crm:P48_has_prefered_identifier [
                   afl:value                       "VIAF"       .
 
 :afl_authorities  rdf:type                        crm:E32_Authority_document ;
-                  rdfs:label                     "AFL Autrhorities" .
+                  rdfs:label                     "authority_file" .
 
 :male            rdf:type                         crm:E55_Type ;
                  rdfs:label                       "gender"     ;

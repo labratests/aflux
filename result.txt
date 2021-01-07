@@ -1,0 +1,54 @@
+[
+  {
+    "node" : "<http://example.org/afl/direct>",
+    "shape" : "<http://example.org/afl/Type_of_name>",
+    "status" : "conformant",
+    "appInfo" : {
+      "evidences" : [
+        "afl:direct passed  [ crm:E55_Type] {1,1} for path rdf:type",
+        "afl:direct passed  [  \"0\" \"1\"] {1,1} for path afl:value"
+      ]
+    },
+    "reason" : "afl:direct passed  [ crm:E55_Type] {1,1} for path rdf:type\nafl:direct passed  [  \"0\" \"1\"] {1,1} for path afl:value"
+  },
+  {
+    "node" : "_:genid0",
+    "shape" : "<http://example.org/afl/Name>",
+    "status" : "conformant",
+    "appInfo" : {
+      "evidences" : [
+        "crm:E82_Actor_appellation is equal to crm:E82_Actor_appellation"
+      ]
+    },
+    "reason" : "crm:E82_Actor_appellation is equal to crm:E82_Actor_appellation"
+  },
+  {
+    "node" : "<http://example.org/e1>",
+    "shape" : "<http://example.org/afl/Person>",
+    "status" : "conformant",
+    "appInfo" : {
+      "evidences" : [
+        "crm:E21_Person is equal to crm:E21_Person",
+        "_:genid2 satisfies not(( @<http://example.org/afl/Name>))",
+        "_:genid10 satisfies not(( @<http://example.org/afl/Name>))",
+        "_:genid4 satisfies not(( @<http://example.org/afl/Name>))",
+        "_:genid13 satisfies not(( @<http://example.org/afl/Name>))",
+        "_:genid7 satisfies not(( @<http://example.org/afl/Name>))"
+      ]
+    },
+    "reason" : "crm:E21_Person is equal to crm:E21_Person\n_:genid2 satisfies not(( @<http://example.org/afl/Name>))\n_:genid10 satisfies not(( @<http://example.org/afl/Name>))\n_:genid4 satisfies not(( @<http://example.org/afl/Name>))\n_:genid13 satisfies not(( @<http://example.org/afl/Name>))\n_:genid7 satisfies not(( @<http://example.org/afl/Name>))"
+  },
+  {
+    "node" : "_:genid1",
+    "shape" : "<http://example.org/afl/Symbol_name>",
+    "status" : "conformant",
+    "appInfo" : {
+      "evidences" : [
+        "Node \"Charlotte\" matched empty shape",
+        "name == \"name\"",
+        "crm:E90_Symbolic_Object is equal to crm:E90_Symbolic_Object"
+      ]
+    },
+    "reason" : "Node \"Charlotte\" matched empty shape\nname == \"name\"\ncrm:E90_Symbolic_Object is equal to crm:E90_Symbolic_Object"
+  }
+]
