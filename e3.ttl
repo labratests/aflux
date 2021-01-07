@@ -1,0 +1,121 @@
+prefix crm:  <http://erlangen-crm.org/current/>
+prefix efr:  <http://erlangen-crm.org/efrbroo/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix :     <http://example.org/>
+prefix afl:  <http://example.org/afl/>
+
+:e3 rdf:type crm:E21_Person ;
+ crm:P1_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  efr:R8_consists_of [
+   rdf:type crm:E90_Symbolic_Object ;
+   rdfs:label "name" ;
+   crm:P2_has_type afl:indirect ;
+   afl:value "Aa, Petrus van der" 
+  ]
+ ] ;
+ crm:P1_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  crm:P139_has_alternative_form [
+   rdf:type           crm:E82_Actor_appellation ;
+   efr:R8_consists_of [
+    rdf:type crm:E90_Symbolic_Object ;
+    rdfs:label "alternative_name" ;
+    crm:P2_has_type afl:indirect ;
+    afl:value "Vanderanus, Petrus" 
+   ]
+  ]
+ ] ;
+ crm:P1_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  crm:P139_has_alternative_form [
+   rdf:type           crm:E82_Actor_appellation ;
+   efr:R8_consists_of [
+    rdf:type crm:E90_Symbolic_Object ;
+    rdfs:label "alternative_name" ;
+    crm:P2_has_type afl:indirect ;
+    afl:value "Aa, Pierre van der" 
+   ]
+  ]
+ ] ; 
+ crm:P1_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  crm:P139_has_alternative_form [
+   rdf:type           crm:E82_Actor_appellation ;
+   efr:R8_consists_of [
+    rdf:type crm:E90_Symbolic_Object ;
+    rdfs:label "alternative_name" ;
+    crm:P2_has_type afl:indirect ;
+    afl:value "Van der Aa, Petrus" 
+   ]
+  ]
+ ] ; 
+ crm:P98_was_born [
+  rdf:type             crm:E67_Birth ;  
+  crm:P7_took_place_at :Belgique ;
+  crm:P4_has_time_span [
+    rdf:type   crm:E52_Time-Span ;
+    rdfs:label "date of birth" ;
+    afl:value  "1550?" 
+  ] 
+ ] ;
+ crm:P100_died_in [
+  rdf:type             crm:E69_Death ;
+  crm:P7_took_place_at :Luxembourg ;
+  crm:P4_has_time_span [
+   rdf:type   crm:E52_Time-Span ;
+   rdfs:label "date of death" ;
+   afl:value  "1591-08-31" 
+  ]
+ ] ;
+ crm:P2_has_type                 :male ; 
+ crm:P14_performed [
+  rdf:type    crm:E7_Activity        ;
+  crm:P2_has_type  [
+   rdf:type   crm:E55_Type ;
+   rdfs:label "profession"     ;
+   afl:value  "Juriste" 
+  ] 
+ ] ;
+ crm:P14_performed [
+  rdf:type    crm:E7_Activity ;
+  crm:P2_has_type  [
+   rdf:type   crm:E55_Type ;
+   rdfs:label "profession" ;
+   afl:value  "Professeur d'université" 
+  ] 
+ ] ;
+ crm:P14_performed [
+  rdf:type    crm:E7_Activity        ;
+  crm:P2_has_type  [
+   rdf:type   crm:E55_Type           ;
+   rdfs:label "Type of activity"     ;
+   afl:value  "Président du Conseil provincial des Pays et Duché de Luxembourg et Comté de Chiny" 
+  ] ;
+  crm:P4_has_time_span [
+   rdf:type   crm:E52_Time-Span ;
+   afl:value  "1574-1591"       
+  ]
+ ] ;
+ crm:crm:P70i_is_documented_in [
+   rdf:type  crm:E31_Document ; 
+   afl:value "Lascombes, François, Chronik der Stadt Luxemburg (1444-1684), 1976, p. 405" 
+ ] ; 
+ crm:crm:P70i_is_documented_in [
+   rdf:type  crm:E31_Document ; 
+   afl:value "http://www.a-z.lu/BIBNET:ALEPH_LUX01000029125" 
+ ] ; 
+ crm:P48_has_prefered_identifier [
+  rdf:type                        crm:E42_Identifier    ;
+  rdfs:label                      "identifier"          ;
+  crm:P2_has_type                 :isni                 ;
+  afl:value                       "0000 0000 8204 4322" 
+ ] ;
+crm:P48_has_prefered_identifier [
+ rdf:type                        crm:E42_Identifier    ;
+ rdfs:label                      "identifier"          ;
+ crm:P2_has_type                 :viaf                 ;
+ afl:value                       "18863051"           
+] 
+.
