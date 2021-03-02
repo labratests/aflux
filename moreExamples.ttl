@@ -10,7 +10,7 @@ prefix afl:  <http://example.org/afl/>
   rdf:type crm:E82_Actor_appellation ;
   efr:R8_consists_of [
    rdf:type crm:E90_Symbolic_Object ;
-   rdfs:label "name" ;
+   rdfs:label "name"@en ;
    crm:P2_has_type afl:direct ;
    afl:value "Charlotte" 
   ]
@@ -19,7 +19,7 @@ prefix afl:  <http://example.org/afl/>
   rdf:type crm:E82_Actor_appellation ;
   efr:R8_consists_of [ 
    rdf:type crm:E90_Symbolic_Object ;
-   rdfs:label "title" ;
+   rdfs:label "title"@en ;
    crm:P2_has_type afl:free_text ;
    afl:value "Grande-Duchesse de Luxembourg" 
   ]
@@ -30,7 +30,7 @@ prefix afl:  <http://example.org/afl/>
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title"@en ;
     crm:P2_has_type afl:free_text ;
     afl:value "Duchesse de Nassau" 
    ] 
@@ -42,7 +42,7 @@ prefix afl:  <http://example.org/afl/>
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title"@en ;
     crm:P2_has_type afl:free_text ;
     afl:value "Großherzogin von Luxemburg" 
    ]
@@ -54,7 +54,7 @@ prefix afl:  <http://example.org/afl/>
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title"@en ;
     crm:P2_has_type afl:free_text ;
     afl:value "Herzogin von Nassau" 
    ]
@@ -66,7 +66,7 @@ prefix afl:  <http://example.org/afl/>
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_name" ;
+    rdfs:label "alternative name"@en ;
     crm:P2_has_type afl:indirect ;
     afl:value "Nassau, Charlotte Adelgonde Élisabeth Marie Wilhelmine de" 
    ]
@@ -75,7 +75,10 @@ prefix afl:  <http://example.org/afl/>
  crm:P98_was_born [
   rdf:type             crm:E67_Birth ;  
   crm:P7_took_place_at :Luxembourg ;
-  crm:P4_has_time_span [
+ ] ;
+ crm:P98_was_born [
+   rdf:type crm:E67_Birth ;
+   crm:P4_has_time_span [
     rdf:type   crm:E52_Time-Span ;
     rdfs:label "date of birth" ;
     afl:value  "1896-01-23" 
@@ -91,38 +94,56 @@ prefix afl:  <http://example.org/afl/>
   ]
  ] ;
  crm:P2_has_type                 :female ;
- crm:P14_performed [
+ crm:P14i_performed [
   rdf:type    crm:E7_Activity        ;
   crm:P2_has_type  [
    rdf:type   crm:E55_Type           ;
-   rdfs:label "Type of activity"     ;
-   afl:value  "Grande-Duchesse de Luxembourg" 
+   rdfs:label "activity"@en     ;
+  ] ;
+  afl:value  "Grande-Duchesse de Luxembourg" ;
+  crm:P4_has_time_span [
+   rdf:type   crm:E52_Time-Span ;
+   afl:value  "1919"       ;
+   rdfs:label "date of beginning"@en
   ] ;
   crm:P4_has_time_span [
    rdf:type   crm:E52_Time-Span ;
-   afl:value  "1919-1964"       
+   afl:value  "1964"       ;
+   rdfs:label "end date"@en
   ]
  ] ;
  crm:P70i_is_documented_in [
    rdf:type  crm:E31_Document ; 
+   crm:P2_has_type [
+     rdf:type crm:E55_Type ;
+     rdfs:label "type of source"@en ;
+     afl:value "to do"
+   ] ;
    afl:value "lb.wikipedia.org, consulté le 21.02.2020" 
  ] ;
- crm:P70i_is_documented_in [
-   rdf:type  crm:E31_Document ; 
-   afl:value "https://lb.wikipedia.org/wiki/Charlotte_vu_L%C3%ABtzebuerg" 
+crm:P70i_is_documented_in [
+  rdf:type  crm:E31_Document ; 
+  afl:value <https://lb.wikipedia.org/wiki/Charlotte_vu_L%C3%ABtzebuerg> 
  ] ;
  crm:P48_has_prefered_identifier [
   rdf:type                        crm:E42_Identifier    ;
-  rdfs:label                      "identifier"          ;
+  rdfs:label                      "ID"          ;
   crm:P2_has_type                 :isni                 ;
   afl:value                       "0000 0003 8244 0415" 
  ] ;
 crm:P48_has_prefered_identifier [
  rdf:type                        crm:E42_Identifier    ;
- rdfs:label                      "identifier"          ;
+ rdfs:label                      "ID"                  ;
  crm:P2_has_type                 :viaf                 ;
  afl:value                       "264499494"           
 ] ;
+crm:P67i_is_refered_to_by [
+  rdf:type crm:E89_Propositional_object ;
+  crm:P48_has_prefered_identifier [
+    rdf:type crm:E42_Identifier ;
+    afl:value "Example 1"
+  ]
+]
 .
 
 :e2 rdf:type crm:E21_Person ;
@@ -141,7 +162,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_name" ;
+    rdfs:label "alternative name" ;
     crm:P2_has_type afl:indirect ;
     afl:value "Cloos, Félix" 
    ]
@@ -153,7 +174,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title" ;
     crm:P2_has_type afl:free_text ;
     afl:value "Jr." 
    ] 
@@ -174,7 +195,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title" ;
     crm:P2_has_type afl:free_text ;
     afl:value "Duchesse de Nassau" 
    ] 
@@ -186,7 +207,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title" ;
     crm:P2_has_type afl:free_text ;
     afl:value "Großherzogin von Luxemburg" 
    ]
@@ -198,7 +219,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title" ;
     crm:P2_has_type afl:free_text ;
     afl:value "Herzogin von Nassau" 
    ]
@@ -210,7 +231,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_name" ;
+    rdfs:label "alternative name" ;
     crm:P2_has_type afl:indirect ;
     afl:value "Nassau, Charlotte Adelgonde Élisabeth Marie Wilhelmine de" 
    ]
@@ -226,7 +247,7 @@ crm:P48_has_prefered_identifier [
   ] 
  ] ;
  crm:P2_has_type                 :male ; 
- crm:P14_performed [
+ crm:P14i_performed [
   rdf:type    crm:E7_Activity        ;
   crm:P2_has_type  [
    rdf:type   crm:E55_Type           ;
@@ -235,34 +256,40 @@ crm:P48_has_prefered_identifier [
   ] ;
   crm:P4_has_time_span [
    rdf:type   crm:E52_Time-Span ;
-   afl:value  "1919-1964"       
-  ]
- ] ;
- crm:P14_performed [
-  rdf:type    crm:E7_Activity        ;
-  crm:P2_has_type  [
-   rdf:type   crm:E55_Type           ;
-   rdfs:label "Type of activity"     ;
-   afl:value  "Directeur de l'entreprise Cloos s.a." 
-  ] ;
+   afl:value  "1919"       ;
+   rdfs:label "date of beginning"@en
+  ];
   crm:P4_has_time_span [
    rdf:type   crm:E52_Time-Span ;
-   afl:value  "1951-1994"       
+   afl:value  "1964"       ;
+   rdfs:label "end date"@en
   ]
  ] ;
- crm:P14_performed [
-  rdf:type    crm:E7_Activity        ;
-  crm:P2_has_type  [
-   rdf:type   crm:E55_Type           ;
-   rdfs:label "Type of activity"     ;
-   afl:value  "Artiste-peintre autodidacte" 
-  ] ;
-  crm:P4_has_time_span [
-   rdf:type   crm:E52_Time-Span ;
-   afl:value  "1994-" 
-  ]
- ] ;
- crm:P70i_is_documented_in [
+# crm:P14i_performed [
+#  rdf:type    crm:E7_Activity        ;
+#  crm:P2_has_type  [
+#   rdf:type   crm:E55_Type           ;
+#   rdfs:label "Type of activity"     ;
+#   afl:value  "Directeur de l'entreprise Cloos s.a." 
+#  ] ;
+#  crm:P4_has_time_span [
+#   rdf:type   crm:E52_Time-Span ;
+#  afl:value  "1951-1994"       
+#  ]
+# ] ;
+# crm:P14i_performed [
+#  rdf:type    crm:E7_Activity        ;
+#  crm:P2_has_type  [
+#   rdf:type   crm:E55_Type           ;
+#   rdfs:label "Type of activity"     ;
+#   afl:value  "Artiste-peintre autodidacte" 
+#  ] ;
+#  crm:P4_has_time_span [
+#   rdf:type   crm:E52_Time-Span ;
+#   afl:value  "1994-" 
+#  ]
+# ] ;
+ crm:P70i_is_documented_in [     # P73 (wikibase)
    rdf:type  crm:E31_Document ; 
    afl:value "lb.wikipedia.org, consulté le 26.01.2020" 
  ] ; 
@@ -298,7 +325,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_name" ;
+    rdfs:label "alternative name" ;
     crm:P2_has_type afl:indirect ;
     afl:value "Vanderanus, Petrus" 
    ]
@@ -310,7 +337,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_name" ;
+    rdfs:label "alternative name" ;
     crm:P2_has_type afl:indirect ;
     afl:value "Aa, Pierre van der" 
    ]
@@ -322,7 +349,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_name" ;
+    rdfs:label "alternative name" ;
     crm:P2_has_type afl:indirect ;
     afl:value "Van der Aa, Petrus" 
    ]
@@ -413,7 +440,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_name" ;
+    rdfs:label "alternative name" ;
     crm:P2_has_type afl:indirect ;
     afl:value "Clemens Willibrordus" 
    ]
@@ -425,7 +452,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title" ;
     crm:P2_has_type afl:free_text ;
     afl:value "Ultraiectensis" 
    ]
@@ -437,7 +464,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title" ;
     crm:P2_has_type afl:free_text ;
     afl:value "Traiectensis" 
    ]
@@ -449,7 +476,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_title" ;
+    rdfs:label "alternative title" ;
     crm:P2_has_type afl:free_text ;
     afl:value "Sanctus" 
    ]
@@ -540,7 +567,7 @@ crm:P48_has_prefered_identifier [
    rdf:type           crm:E82_Actor_appellation ;
    efr:R8_consists_of [
     rdf:type crm:E90_Symbolic_Object ;
-    rdfs:label "alternative_name" ;
+    rdfs:label "alternative name" ;
     crm:P2_has_type afl:indirect ;
     afl:value "Barthel, Joseph" 
    ]
@@ -658,14 +685,16 @@ crm:P48_has_prefered_identifier [
 
 
 :isni             rdf:type                        crm:E55_Type          ;
-                  crm:P71_is_listed_in            :afl_authorities      ;
+               #   crm:P71_is_listed_in            :afl_authorities      ;
+                  rdfs:label                      "ID Source"@en        ;
                   afl:value                       "ISNI"       .
 :viaf             rdf:type                        crm:E55_Type          ;
-                  crm:P71_is_listed_in            :afl_authorities      ;
+               #   crm:P71_is_listed_in            :afl_authorities      ;
+                  rdfs:label                      "ID Source"@en        ;
                   afl:value                       "VIAF"       .
 
-:afl_authorities  rdf:type                        crm:E32_Authority_document ;
-                  rdfs:label                     "authority_file" .
+#:afl_authorities  rdf:type                        crm:E32_Authority_document ;
+#                  rdfs:label                     "authority_file" .
 
 :male            rdf:type                         crm:E55_Type ;
                  rdfs:label                       "gender"     ;

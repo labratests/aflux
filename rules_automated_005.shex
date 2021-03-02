@@ -1,0 +1,305 @@
+
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/>
+prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>
+prefix afl: <http://afl.org/>
+
+afl:E82_Actor_Appellation_HeadingTitle {
+rdf:type  [ crm:E82_Actor_Appellation] ; 
+frbroo:R8_consists_of @afl:E90_Symbolic_Object_HeadingTitle?
+}
+
+crm:E31_Document {
+rdf:type  [ crm:E31_Document] ; 
+crm:P2_has_type @crm:E55_Type
+}
+
+afl:E21_Person_Gender {
+rdf:type  [ crm:E21_Person] ; 
+crm:P2_has_type @afl:E55_Type_Gender
+}
+
+afl:E21_Person_SourcesUrl {
+rdf:type  [ crm:E21_Person] ; 
+crm:P70i_is_documented_in @afl:E31_Document_SourcesUrl
+}
+
+afl:E55_Type_ActivityType {
+rdf:type  [ crm:E55_Type] 
+}
+
+afl:E55_Type_ProfessionType {
+rdf:type  [ crm:E55_Type] 
+}
+
+afl:E89_Propositional_Object_InternalStandardIdentifier {
+rdf:type  [ crm:E89_Propositional_Object] ; 
+crm:P48_has_preferred_identifier @afl:E42_Identifier_InternalStandardIdentifier
+}
+
+crm:E69_Death {
+rdf:type  [ crm:E69_Death] ; 
+crm:P4_has_time-span @crm:E52_Time-Span?; 
+crm:P7_took_place_at @crm:E53_Place?
+}
+
+afl:E90_Symbolic_Object_AlternativeNumeration {
+rdf:type  [ crm:E90_Symbolic_Object] 
+}
+
+afl:E21_Person_ProfessionType {
+rdf:type  [ crm:E21_Person] ; 
+crm:P14i_performed @afl:E7_Activity_ProfessionType
+}
+
+afl:E82_Actor_Appellation_AlternativeTitle {
+rdf:type  [ crm:E82_Actor_Appellation] ; 
+crm:P139_has_alternative_form @afl:E82_Actor_Appellation_AlternativeTitle*; 
+frbroo:R8_consists_of @afl:E90_Symbolic_Object_AlternativeTitle?
+}
+
+afl:E89_Propositional_Object_SourceOfData {
+rdf:type  [ crm:E89_Propositional_Object] ; 
+crm:P94i_was_created_by @afl:E65_Creation_SourceOfData
+}
+
+crm:E90_Symbolic_Object {
+rdf:type  [ crm:E90_Symbolic_Object] ; 
+crm:P2_has_type @crm:E55_Type
+}
+
+afl:E7_Activity_ProfessionType {
+rdf:type  [ crm:E7_Activity] ; 
+crm:P2_has_type @afl:E55_Type_ProfessionType
+}
+
+afl:E7_Activity_ActivityType {
+rdf:type  [ crm:E7_Activity] ; 
+crm:P2_has_type @afl:E55_Type_ActivityType; 
+crm:P2_has_type @afl:E55_Type_ActivityType*
+}
+
+afl:E21_Person_HeadingNumeration {
+rdf:type  [ crm:E21_Person] ; 
+crm:P1_is_identified_by @afl:E82_Actor_Appellation_HeadingNumeration
+}
+
+afl:E42_Identifier_ExternalStandardIdentifierName {
+rdf:type  [ crm:E42_Identifier] ; 
+crm:P2_has_type @afl:E55_Type_ExternalStandardIdentifierName
+}
+
+afl:E42_Identifier_ExternalStandardIdentifierID {
+rdf:type  [ crm:E42_Identifier] 
+}
+
+afl:E65_Creation_SourceOfData {
+rdf:type  [ crm:E65_Creation] ; 
+crm:P14_carried_out_by @afl:E39_Actor_SourceOfData+
+}
+
+crm:E7_Activity {
+rdf:type  [ crm:E7_Activity] ; 
+crm:P4_has_time-span @crm:E52_Time-Span; 
+crm:P4_has_time-span @crm:E52_Time-Span?; 
+crm:P4_has_time-span @crm:E52_Time-Span?; 
+crm:P4_has_time-span @crm:E52_Time-Span?; 
+crm:P4_has_time-span @crm:E52_Time-Span*
+}
+
+afl:E89_Propositional_Object_DateOfCreation {
+rdf:type  [ crm:E89_Propositional_Object] ; 
+crm:P94i_was_created_by @afl:E65_Creation_DateOfCreation
+}
+
+afl:E65_Creation_DateOfCreation {
+rdf:type  [ crm:E65_Creation] ; 
+crm:P4_has_time-span @afl:E52_Time-Span_DateOfCreation
+}
+
+afl:E21_Person_AlternativeTitle {
+rdf:type  [ crm:E21_Person] ; 
+crm:P1_is_identified_by @afl:E82_Actor_Appellation_AlternativeTitle
+}
+
+crm:E62_String {
+rdf:type  [ crm:E62_String] 
+}
+
+afl:E21_Person_ActivityType {
+rdf:type  [ crm:E21_Person] ; 
+crm:P14i_performed @afl:E7_Activity_ActivityType; 
+crm:P14i_performed @afl:E7_Activity_ActivityType*
+}
+
+afl:E52_Time-Span_DateOfCreation {
+rdf:type  [ crm:E52_Time-Span] 
+}
+
+afl:E42_Identifier_InternalStandardIdentifier {
+rdf:type  [ crm:E42_Identifier] 
+}
+
+afl:E82_Actor_Appellation_HeadingName {
+rdf:type  [ crm:E82_Actor_Appellation] ; 
+frbroo:R8_consists_of @afl:E90_Symbolic_Object_HeadingName
+}
+
+afl:E55_Type_NotesInternal {
+rdf:type  [ crm:E55_Type] 
+}
+
+afl:E82_Actor_Appellation_HeadingNumeration {
+rdf:type  [ crm:E82_Actor_Appellation] ; 
+frbroo:R8_consists_of @afl:E90_Symbolic_Object_HeadingNumeration?
+}
+
+afl:E90_Symbolic_Object_AlternativeName {
+rdf:type  [ crm:E90_Symbolic_Object] 
+}
+
+afl:E90_Symbolic_Object_HeadingTitle {
+rdf:type  [ crm:E90_Symbolic_Object] 
+}
+
+crm:E67_Birth {
+rdf:type  [ crm:E67_Birth] ; 
+crm:P4_has_time-span @crm:E52_Time-Span; 
+crm:P7_took_place_at @crm:E53_Place?
+}
+
+afl:E90_Symbolic_Object_HeadingNumeration {
+rdf:type  [ crm:E90_Symbolic_Object] 
+}
+
+afl:E21_Person_ExternalStandardIdentifierID {
+rdf:type  [ crm:E21_Person] ; 
+crm:P48_has_preferred_identifier @afl:E42_Identifier_ExternalStandardIdentifierID
+}
+
+afl:E55_Type_HeadingType {
+rdf:type  [ crm:E55_Type] 
+}
+
+crm:E53_Place {
+rdf:type  [ crm:E53_Place] 
+}
+
+afl:E31_Document_SourcesUrl {
+rdf:type  [ crm:E31_Document] 
+}
+
+afl:E13_Attribute_Assignment_DateOfModification {
+rdf:type  [ crm:E13_Attribute_Assignment] 
+}
+
+afl:E62_String_NotesInternal {
+rdf:type  [ crm:E62_String] ; 
+crm:P2_has_type @afl:E55_Type_NotesInternal
+}
+
+afl:E90_Symbolic_Object_HeadingName {
+rdf:type  [ crm:E90_Symbolic_Object] 
+}
+
+afl:E74_Group_SourceOfData {
+rdf:type  [ crm:E74_Group] 
+}
+
+afl:E90_Symbolic_Object_AlternativeTitle {
+rdf:type  [ crm:E90_Symbolic_Object] 
+}
+
+crm:E21_Person {
+rdf:type  [ crm:E21_Person] ; 
+crm:P98i_was_born @crm:E67_Birth; 
+crm:P98i_was_born @crm:E67_Birth?; 
+crm:P100i_died_in @crm:E69_Death; 
+crm:P100i_died_in @crm:E69_Death?; 
+crm:P3_has_note @crm:E62_String*
+}
+
+afl:E82_Actor_Appellation_AlternativeName {
+rdf:type  [ crm:E82_Actor_Appellation] ; 
+crm:P139_has_alternative_form @afl:E82_Actor_Appellation_AlternativeName*; 
+frbroo:R8_consists_of @afl:E90_Symbolic_Object_AlternativeName*
+}
+
+afl:E21_Person_InternalStandardIdentifier {
+rdf:type  [ crm:E21_Person] ; 
+crm:P67i_is_referred_to_by @afl:E89_Propositional_Object_InternalStandardIdentifier
+}
+
+crm:E55_Type {
+rdf:type  [ crm:E55_Type] ; 
+crm:P127_has_broader_term @crm:E55_Type*; 
+crm:P127i_has_narrower_term @crm:E55_Type*
+}
+
+afl:E21_Person_AlternativeName {
+rdf:type  [ crm:E21_Person] ; 
+crm:P1_is_identified_by @afl:E82_Actor_Appellation_AlternativeName
+}
+
+<> {
+rdf:type  [ <>] ; 
+<> @<>
+}
+
+afl:E55_Type_Gender {
+rdf:type  [ crm:E55_Type] 
+}
+
+afl:E21_Person_AlternativeNumeration {
+rdf:type  [ crm:E21_Person] ; 
+crm:P1_is_identified_by @afl:E82_Actor_Appellation_AlternativeNumeration
+}
+
+afl:E21_Person_HeadingName {
+rdf:type  [ crm:E21_Person] ; 
+crm:P1_is_identified_by @afl:E82_Actor_Appellation_HeadingName
+}
+
+afl:E39_Actor_SourceOfData {
+rdf:type  [ crm:E39_Actor] ; 
+crm:P107_has_current_or_former_member @afl:E74_Group_SourceOfData+
+}
+
+afl:E90_Symbolic_Object_HeadingType {
+rdf:type  [ crm:E90_Symbolic_Object] ; 
+crm:P2_has_type @afl:E55_Type_HeadingType
+}
+
+afl:E82_Actor_Appellation_AlternativeNumeration {
+rdf:type  [ crm:E82_Actor_Appellation] ; 
+crm:P139_has_alternative_form @afl:E82_Actor_Appellation_AlternativeNumeration*; 
+frbroo:R8_consists_of @afl:E90_Symbolic_Object_AlternativeNumeration?
+}
+
+afl:E89_Propositional_Object_DateOfModification {
+rdf:type  [ crm:E89_Propositional_Object] ; 
+crm:P141i_was_assigned_by @afl:E13_Attribute_Assignment_DateOfModification
+}
+
+afl:E21_Person_SourcesText {
+rdf:type  [ crm:E21_Person] ; 
+crm:P70i_is_documented_in @afl:E31_Document_SourcesText
+}
+
+afl:E21_Person_HeadingTitle {
+rdf:type  [ crm:E21_Person] ; 
+crm:P1_is_identified_by @afl:E82_Actor_Appellation_HeadingTitle
+}
+
+afl:E55_Type_ExternalStandardIdentifierName {
+rdf:type  [ crm:E55_Type] 
+}
+
+crm:E52_Time-Span {
+rdf:type  [ crm:E52_Time-Span] 
+}
+
+afl:E31_Document_SourcesText {
+rdf:type  [ crm:E31_Document] 
+}

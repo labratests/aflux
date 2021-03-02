@@ -5,7 +5,7 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix afl: <http://example.org/afl/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
-afl:Person EXTRA crm:P1_is_identified_by {
+afl:Person {
     rdf:type                        [ crm:E21_Person ] ;
     crm:P1_is_identified_by         @afl:Name                         ;
     crm:P1_is_identified_by         @afl:Title                      * ;

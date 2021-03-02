@@ -1,0 +1,2135 @@
+{
+  "type": "ShapeTest",
+  "node": "http://example.org/e1",
+  "shape": "http://example.org/afl/Person",
+  "solution": {
+    "type": "EachOfSolutions",
+    "solutions": [
+      {
+        "type": "EachOfSolution",
+        "expressions": [
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                "object": "http://erlangen-crm.org/current/E21_Person"
+              }
+            ],
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "values": [
+                "http://erlangen-crm.org/current/E21_Person"
+              ]
+            }
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+                "object": "_:b0",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b0",
+                  "shape": "http://example.org/afl/Name",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b0",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b0",
+                                "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                "object": "_:b1",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b1",
+                                  "shape": "http://example.org/afl/Symbol_name",
+                                  "solution": {
+                                    "type": "EachOfSolutions",
+                                    "solutions": [
+                                      {
+                                        "type": "EachOfSolution",
+                                        "expressions": [
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b1",
+                                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                "object": "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "values": [
+                                                "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b1",
+                                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                "object": {
+                                                  "value": "name"
+                                                }
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "values": [
+                                                {
+                                                  "value": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b1",
+                                                "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                "object": "http://example.org/afl/direct",
+                                                "referenced": {
+                                                  "type": "ShapeTest",
+                                                  "node": "http://example.org/afl/direct",
+                                                  "shape": "http://example.org/afl/Type_of_name",
+                                                  "solution": {
+                                                    "type": "EachOfSolutions",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "EachOfSolution",
+                                                        "expressions": [
+                                                          {
+                                                            "type": "TripleConstraintSolutions",
+                                                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                            "solutions": [
+                                                              {
+                                                                "type": "TestedTriple",
+                                                                "subject": "http://example.org/afl/direct",
+                                                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                                "object": "http://erlangen-crm.org/current/E55_Type"
+                                                              }
+                                                            ],
+                                                            "valueExpr": {
+                                                              "type": "NodeConstraint",
+                                                              "values": [
+                                                                "http://erlangen-crm.org/current/E55_Type"
+                                                              ]
+                                                            }
+                                                          },
+                                                          {
+                                                            "type": "TripleConstraintSolutions",
+                                                            "predicate": "http://example.org/afl/value",
+                                                            "solutions": [
+                                                              {
+                                                                "type": "TestedTriple",
+                                                                "subject": "http://example.org/afl/direct",
+                                                                "predicate": "http://example.org/afl/value",
+                                                                "object": {
+                                                                  "value": "0"
+                                                                }
+                                                              }
+                                                            ],
+                                                            "valueExpr": {
+                                                              "type": "NodeConstraint",
+                                                              "values": [
+                                                                {
+                                                                  "value": "0"
+                                                                },
+                                                                {
+                                                                  "value": "1"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "ShapeRef",
+                                              "reference": "http://example.org/afl/Type_of_name"
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://example.org/afl/value",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b1",
+                                                "predicate": "http://example.org/afl/value",
+                                                "object": {
+                                                  "value": "Charlotte"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/Symbol_name"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/Name"
+            }
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+                "object": "_:b2",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b2",
+                  "shape": "http://example.org/afl/Title",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b2",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b2",
+                                "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                "object": "_:b3",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b3",
+                                  "shape": "http://example.org/afl/Symbol_title",
+                                  "solution": {
+                                    "type": "EachOfSolutions",
+                                    "solutions": [
+                                      {
+                                        "type": "EachOfSolution",
+                                        "expressions": [
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b3",
+                                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                "object": "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "values": [
+                                                "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b3",
+                                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                "object": {
+                                                  "value": "title"
+                                                }
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "values": [
+                                                {
+                                                  "value": "title"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b3",
+                                                "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                "object": "http://example.org/afl/free_text"
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "values": [
+                                                "http://example.org/afl/free_text"
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://example.org/afl/value",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b3",
+                                                "predicate": "http://example.org/afl/value",
+                                                "object": {
+                                                  "value": "Grande-Duchesse de Luxembourg"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/Symbol_title"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/Title"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+                "object": "_:b13",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b13",
+                  "shape": "http://example.org/afl/AlternativeName",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b13",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P139_has_alternative_form",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b13",
+                                "predicate": "http://erlangen-crm.org/current/P139_has_alternative_form",
+                                "object": "_:b14",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b14",
+                                  "shape": "http://example.org/afl/AlternativeNameForm",
+                                  "solution": {
+                                    "type": "TripleConstraintSolutions",
+                                    "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                    "solutions": [
+                                      {
+                                        "type": "TestedTriple",
+                                        "subject": "_:b14",
+                                        "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                        "object": "_:b15",
+                                        "referenced": {
+                                          "type": "ShapeTest",
+                                          "node": "_:b15",
+                                          "shape": "http://example.org/afl/SymbolAlternativeName",
+                                          "solution": {
+                                            "type": "EachOfSolutions",
+                                            "solutions": [
+                                              {
+                                                "type": "EachOfSolution",
+                                                "expressions": [
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b15",
+                                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                        "object": "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b15",
+                                                        "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                        "object": {
+                                                          "value": "alternative_name"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        {
+                                                          "value": "alternative_name"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b15",
+                                                        "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                        "object": "http://example.org/afl/indirect",
+                                                        "referenced": {
+                                                          "type": "ShapeTest",
+                                                          "node": "http://example.org/afl/indirect",
+                                                          "shape": "http://example.org/afl/Type_of_name",
+                                                          "solution": {
+                                                            "type": "EachOfSolutions",
+                                                            "solutions": [
+                                                              {
+                                                                "type": "EachOfSolution",
+                                                                "expressions": [
+                                                                  {
+                                                                    "type": "TripleConstraintSolutions",
+                                                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                                    "solutions": [
+                                                                      {
+                                                                        "type": "TestedTriple",
+                                                                        "subject": "http://example.org/afl/indirect",
+                                                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                                        "object": "http://erlangen-crm.org/current/E55_Type"
+                                                                      }
+                                                                    ],
+                                                                    "valueExpr": {
+                                                                      "type": "NodeConstraint",
+                                                                      "values": [
+                                                                        "http://erlangen-crm.org/current/E55_Type"
+                                                                      ]
+                                                                    }
+                                                                  },
+                                                                  {
+                                                                    "type": "TripleConstraintSolutions",
+                                                                    "predicate": "http://example.org/afl/value",
+                                                                    "solutions": [
+                                                                      {
+                                                                        "type": "TestedTriple",
+                                                                        "subject": "http://example.org/afl/indirect",
+                                                                        "predicate": "http://example.org/afl/value",
+                                                                        "object": {
+                                                                          "value": "1"
+                                                                        }
+                                                                      }
+                                                                    ],
+                                                                    "valueExpr": {
+                                                                      "type": "NodeConstraint",
+                                                                      "values": [
+                                                                        {
+                                                                          "value": "0"
+                                                                        },
+                                                                        {
+                                                                          "value": "1"
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "ShapeRef",
+                                                      "reference": "http://example.org/afl/Type_of_name"
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://example.org/afl/value",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b15",
+                                                        "predicate": "http://example.org/afl/value",
+                                                        "object": {
+                                                          "value": "Nassau, Charlotte Adelgonde Élisabeth Marie Wilhelmine de"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "valueExpr": {
+                                      "type": "ShapeRef",
+                                      "reference": "http://example.org/afl/SymbolAlternativeName"
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/AlternativeNameForm"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/AlternativeName"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+                "object": "_:b10",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b10",
+                  "shape": "http://example.org/afl/AlternativeTitle",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b10",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P139_has_alternative_form",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b10",
+                                "predicate": "http://erlangen-crm.org/current/P139_has_alternative_form",
+                                "object": "_:b11",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b11",
+                                  "shape": "http://example.org/afl/AlternativeTitleForm",
+                                  "solution": {
+                                    "type": "TripleConstraintSolutions",
+                                    "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                    "solutions": [
+                                      {
+                                        "type": "TestedTriple",
+                                        "subject": "_:b11",
+                                        "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                        "object": "_:b12",
+                                        "referenced": {
+                                          "type": "ShapeTest",
+                                          "node": "_:b12",
+                                          "shape": "http://example.org/afl/SymbolAlternativeTitle",
+                                          "solution": {
+                                            "type": "EachOfSolutions",
+                                            "solutions": [
+                                              {
+                                                "type": "EachOfSolution",
+                                                "expressions": [
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b12",
+                                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                        "object": "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b12",
+                                                        "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                        "object": {
+                                                          "value": "alternative_title"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        {
+                                                          "value": "alternative_title"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b12",
+                                                        "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                        "object": "http://example.org/afl/free_text"
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        "http://example.org/afl/free_text"
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://example.org/afl/value",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b12",
+                                                        "predicate": "http://example.org/afl/value",
+                                                        "object": {
+                                                          "value": "Herzogin von Nassau"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "valueExpr": {
+                                      "type": "ShapeRef",
+                                      "reference": "http://example.org/afl/SymbolAlternativeTitle"
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/AlternativeTitleForm"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+                "object": "_:b7",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b7",
+                  "shape": "http://example.org/afl/AlternativeTitle",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b7",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P139_has_alternative_form",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b7",
+                                "predicate": "http://erlangen-crm.org/current/P139_has_alternative_form",
+                                "object": "_:b8",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b8",
+                                  "shape": "http://example.org/afl/AlternativeTitleForm",
+                                  "solution": {
+                                    "type": "TripleConstraintSolutions",
+                                    "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                    "solutions": [
+                                      {
+                                        "type": "TestedTriple",
+                                        "subject": "_:b8",
+                                        "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                        "object": "_:b9",
+                                        "referenced": {
+                                          "type": "ShapeTest",
+                                          "node": "_:b9",
+                                          "shape": "http://example.org/afl/SymbolAlternativeTitle",
+                                          "solution": {
+                                            "type": "EachOfSolutions",
+                                            "solutions": [
+                                              {
+                                                "type": "EachOfSolution",
+                                                "expressions": [
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b9",
+                                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                        "object": "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b9",
+                                                        "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                        "object": {
+                                                          "value": "alternative_title"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        {
+                                                          "value": "alternative_title"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b9",
+                                                        "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                        "object": "http://example.org/afl/free_text"
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        "http://example.org/afl/free_text"
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://example.org/afl/value",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b9",
+                                                        "predicate": "http://example.org/afl/value",
+                                                        "object": {
+                                                          "value": "Großherzogin von Luxemburg"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "valueExpr": {
+                                      "type": "ShapeRef",
+                                      "reference": "http://example.org/afl/SymbolAlternativeTitle"
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/AlternativeTitleForm"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+                "object": "_:b4",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b4",
+                  "shape": "http://example.org/afl/AlternativeTitle",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b4",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E82_Actor_appellation"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P139_has_alternative_form",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b4",
+                                "predicate": "http://erlangen-crm.org/current/P139_has_alternative_form",
+                                "object": "_:b5",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b5",
+                                  "shape": "http://example.org/afl/AlternativeTitleForm",
+                                  "solution": {
+                                    "type": "TripleConstraintSolutions",
+                                    "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                    "solutions": [
+                                      {
+                                        "type": "TestedTriple",
+                                        "subject": "_:b5",
+                                        "predicate": "http://erlangen-crm.org/efrbroo/R8_consists_of",
+                                        "object": "_:b6",
+                                        "referenced": {
+                                          "type": "ShapeTest",
+                                          "node": "_:b6",
+                                          "shape": "http://example.org/afl/SymbolAlternativeTitle",
+                                          "solution": {
+                                            "type": "EachOfSolutions",
+                                            "solutions": [
+                                              {
+                                                "type": "EachOfSolution",
+                                                "expressions": [
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b6",
+                                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                        "object": "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        "http://erlangen-crm.org/current/E90_Symbolic_Object"
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b6",
+                                                        "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                        "object": {
+                                                          "value": "alternative_title"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        {
+                                                          "value": "alternative_title"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b6",
+                                                        "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                                        "object": "http://example.org/afl/free_text"
+                                                      }
+                                                    ],
+                                                    "valueExpr": {
+                                                      "type": "NodeConstraint",
+                                                      "values": [
+                                                        "http://example.org/afl/free_text"
+                                                      ]
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "TripleConstraintSolutions",
+                                                    "predicate": "http://example.org/afl/value",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "TestedTriple",
+                                                        "subject": "_:b6",
+                                                        "predicate": "http://example.org/afl/value",
+                                                        "object": {
+                                                          "value": "Duchesse de Nassau"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "valueExpr": {
+                                      "type": "ShapeRef",
+                                      "reference": "http://example.org/afl/SymbolAlternativeTitle"
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/AlternativeTitleForm"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/AlternativeTitle"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P1_is_identified_by",
+            "solutions": [],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/AlternativeNumeration"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P98_was_born",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P98_was_born",
+                "object": "_:b16",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b16",
+                  "shape": "http://example.org/afl/Birth",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b16",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E67_Birth"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E67_Birth"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P7_took_place_at",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b16",
+                                "predicate": "http://erlangen-crm.org/current/P7_took_place_at",
+                                "object": "http://example.org/Luxembourg",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "http://example.org/Luxembourg",
+                                  "shape": "http://example.org/afl/Place",
+                                  "solution": {
+                                    "type": "TripleConstraintSolutions",
+                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                    "solutions": [
+                                      {
+                                        "type": "TestedTriple",
+                                        "subject": "http://example.org/Luxembourg",
+                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                        "object": "http://erlangen-crm.org/current/E53_Place"
+                                      }
+                                    ],
+                                    "valueExpr": {
+                                      "type": "NodeConstraint",
+                                      "values": [
+                                        "http://erlangen-crm.org/current/E53_Place"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/Place"
+                            },
+                            "min": 0,
+                            "max": 1
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P4_has_time_span",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b16",
+                                "predicate": "http://erlangen-crm.org/current/P4_has_time_span",
+                                "object": "_:b17",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b17",
+                                  "shape": "http://example.org/afl/Time_Span",
+                                  "solution": {
+                                    "type": "TripleConstraintSolutions",
+                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                    "solutions": [
+                                      {
+                                        "type": "TestedTriple",
+                                        "subject": "_:b17",
+                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                        "object": "http://erlangen-crm.org/current/E52_Time-Span"
+                                      }
+                                    ],
+                                    "valueExpr": {
+                                      "type": "NodeConstraint",
+                                      "values": [
+                                        "http://erlangen-crm.org/current/E52_Time-Span"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/Time_Span"
+                            },
+                            "min": 0,
+                            "max": -1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/Birth"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P100_died_in",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P100_died_in",
+                "object": "_:b18",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b18",
+                  "shape": "http://example.org/afl/Death",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b18",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E69_Death"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E69_Death"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P7_took_place_at",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b18",
+                                "predicate": "http://erlangen-crm.org/current/P7_took_place_at",
+                                "object": "http://example.org/Luxembourg",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "http://example.org/Luxembourg",
+                                  "shape": "http://example.org/afl/Place",
+                                  "solution": {
+                                    "type": "TripleConstraintSolutions",
+                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                    "solutions": [
+                                      {
+                                        "type": "TestedTriple",
+                                        "subject": "http://example.org/Luxembourg",
+                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                        "object": "http://erlangen-crm.org/current/E53_Place"
+                                      }
+                                    ],
+                                    "valueExpr": {
+                                      "type": "NodeConstraint",
+                                      "values": [
+                                        "http://erlangen-crm.org/current/E53_Place"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/Place"
+                            },
+                            "min": 0,
+                            "max": 1
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P4_has_time_span",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b18",
+                                "predicate": "http://erlangen-crm.org/current/P4_has_time_span",
+                                "object": "_:b19",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b19",
+                                  "shape": "http://example.org/afl/Time_Span",
+                                  "solution": {
+                                    "type": "TripleConstraintSolutions",
+                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                    "solutions": [
+                                      {
+                                        "type": "TestedTriple",
+                                        "subject": "_:b19",
+                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                        "object": "http://erlangen-crm.org/current/E52_Time-Span"
+                                      }
+                                    ],
+                                    "valueExpr": {
+                                      "type": "NodeConstraint",
+                                      "values": [
+                                        "http://erlangen-crm.org/current/E52_Time-Span"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/Time_Span"
+                            },
+                            "min": 0,
+                            "max": -1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/Death"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P2_has_type",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                "object": "http://example.org/female",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "http://example.org/female",
+                  "shape": "http://example.org/afl/Gender",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://example.org/female",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E55_Type"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E55_Type"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://example.org/female",
+                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "object": {
+                                  "value": "gender"
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                {
+                                  "value": "gender"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://example.org/afl/value",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://example.org/female",
+                                "predicate": "http://example.org/afl/value",
+                                "object": {
+                                  "value": "2",
+                                  "type": "http://www.w3.org/2001/XMLSchema#integer"
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                {
+                                  "value": "0",
+                                  "type": "http://www.w3.org/2001/XMLSchema#integer"
+                                },
+                                {
+                                  "value": "1",
+                                  "type": "http://www.w3.org/2001/XMLSchema#integer"
+                                },
+                                {
+                                  "value": "2",
+                                  "type": "http://www.w3.org/2001/XMLSchema#integer"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/Gender"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P14_performed",
+            "solutions": [],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/Profession"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P14_performed",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P14_performed",
+                "object": "_:b20",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b20",
+                  "shape": "http://example.org/afl/Activity",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b20",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E7_Activity"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E7_Activity"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b20",
+                                "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                "object": "_:b21",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b21",
+                                  "shape": "http://example.org/afl/TypeOfActivity",
+                                  "solution": {
+                                    "type": "EachOfSolutions",
+                                    "solutions": [
+                                      {
+                                        "type": "EachOfSolution",
+                                        "expressions": [
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b21",
+                                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                "object": "http://erlangen-crm.org/current/E55_Type"
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "values": [
+                                                "http://erlangen-crm.org/current/E55_Type"
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "_:b21",
+                                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                "object": {
+                                                  "value": "Type of activity"
+                                                }
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "values": [
+                                                {
+                                                  "value": "Type of activity"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/TypeOfActivity"
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P4_has_time_span",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b20",
+                                "predicate": "http://erlangen-crm.org/current/P4_has_time_span",
+                                "object": "_:b22",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "_:b22",
+                                  "shape": "http://example.org/afl/Time_Span",
+                                  "solution": {
+                                    "type": "TripleConstraintSolutions",
+                                    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                    "solutions": [
+                                      {
+                                        "type": "TestedTriple",
+                                        "subject": "_:b22",
+                                        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                        "object": "http://erlangen-crm.org/current/E52_Time-Span"
+                                      }
+                                    ],
+                                    "valueExpr": {
+                                      "type": "NodeConstraint",
+                                      "values": [
+                                        "http://erlangen-crm.org/current/E52_Time-Span"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/Time_Span"
+                            },
+                            "min": 0,
+                            "max": -1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/Activity"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P48_has_prefered_identifier",
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P48_has_prefered_identifier",
+                "object": "_:b26",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b26",
+                  "shape": "http://example.org/afl/ExternalStandardIdentifier",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b26",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E42_Identifier"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E42_Identifier"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b26",
+                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "object": {
+                                  "value": "identifier"
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                {
+                                  "value": "identifier"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b26",
+                                "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                "object": "http://example.org/viaf",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "http://example.org/viaf",
+                                  "shape": "http://example.org/afl/Type",
+                                  "solution": {
+                                    "type": "EachOfSolutions",
+                                    "solutions": [
+                                      {
+                                        "type": "EachOfSolution",
+                                        "expressions": [
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://example.org/viaf",
+                                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                "object": "http://erlangen-crm.org/current/E55_Type"
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "values": [
+                                                "http://erlangen-crm.org/current/E55_Type"
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://erlangen-crm.org/current/P71_is_listed_in",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://example.org/viaf",
+                                                "predicate": "http://erlangen-crm.org/current/P71_is_listed_in",
+                                                "object": "http://example.org/afl_authorities",
+                                                "referenced": {
+                                                  "type": "ShapeTest",
+                                                  "node": "http://example.org/afl_authorities",
+                                                  "shape": "http://example.org/afl/Authority_document",
+                                                  "solution": {
+                                                    "type": "EachOfSolutions",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "EachOfSolution",
+                                                        "expressions": [
+                                                          {
+                                                            "type": "TripleConstraintSolutions",
+                                                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                            "solutions": [
+                                                              {
+                                                                "type": "TestedTriple",
+                                                                "subject": "http://example.org/afl_authorities",
+                                                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                                "object": "http://erlangen-crm.org/current/E32_Authority_document"
+                                                              }
+                                                            ],
+                                                            "valueExpr": {
+                                                              "type": "NodeConstraint",
+                                                              "values": [
+                                                                "http://erlangen-crm.org/current/E32_Authority_document"
+                                                              ]
+                                                            }
+                                                          },
+                                                          {
+                                                            "type": "TripleConstraintSolutions",
+                                                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                            "solutions": [
+                                                              {
+                                                                "type": "TestedTriple",
+                                                                "subject": "http://example.org/afl_authorities",
+                                                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                                "object": {
+                                                                  "value": "authority_file"
+                                                                }
+                                                              }
+                                                            ],
+                                                            "valueExpr": {
+                                                              "type": "NodeConstraint",
+                                                              "values": [
+                                                                {
+                                                                  "value": "authority_file"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "ShapeRef",
+                                              "reference": "http://example.org/afl/Authority_document"
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://example.org/afl/value",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://example.org/viaf",
+                                                "predicate": "http://example.org/afl/value",
+                                                "object": {
+                                                  "value": "VIAF"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/Type"
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://example.org/afl/value",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b26",
+                                "predicate": "http://example.org/afl/value",
+                                "object": {
+                                  "value": "264499494"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "TestedTriple",
+                "subject": "http://example.org/e1",
+                "predicate": "http://erlangen-crm.org/current/P48_has_prefered_identifier",
+                "object": "_:b25",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "_:b25",
+                  "shape": "http://example.org/afl/ExternalStandardIdentifier",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b25",
+                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "object": "http://erlangen-crm.org/current/E42_Identifier"
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                "http://erlangen-crm.org/current/E42_Identifier"
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b25",
+                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "object": {
+                                  "value": "identifier"
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "values": [
+                                {
+                                  "value": "identifier"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b25",
+                                "predicate": "http://erlangen-crm.org/current/P2_has_type",
+                                "object": "http://example.org/isni",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "http://example.org/isni",
+                                  "shape": "http://example.org/afl/Type",
+                                  "solution": {
+                                    "type": "EachOfSolutions",
+                                    "solutions": [
+                                      {
+                                        "type": "EachOfSolution",
+                                        "expressions": [
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://example.org/isni",
+                                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                "object": "http://erlangen-crm.org/current/E55_Type"
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "values": [
+                                                "http://erlangen-crm.org/current/E55_Type"
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://erlangen-crm.org/current/P71_is_listed_in",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://example.org/isni",
+                                                "predicate": "http://erlangen-crm.org/current/P71_is_listed_in",
+                                                "object": "http://example.org/afl_authorities",
+                                                "referenced": {
+                                                  "type": "ShapeTest",
+                                                  "node": "http://example.org/afl_authorities",
+                                                  "shape": "http://example.org/afl/Authority_document",
+                                                  "solution": {
+                                                    "type": "EachOfSolutions",
+                                                    "solutions": [
+                                                      {
+                                                        "type": "EachOfSolution",
+                                                        "expressions": [
+                                                          {
+                                                            "type": "TripleConstraintSolutions",
+                                                            "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                            "solutions": [
+                                                              {
+                                                                "type": "TestedTriple",
+                                                                "subject": "http://example.org/afl_authorities",
+                                                                "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                                                "object": "http://erlangen-crm.org/current/E32_Authority_document"
+                                                              }
+                                                            ],
+                                                            "valueExpr": {
+                                                              "type": "NodeConstraint",
+                                                              "values": [
+                                                                "http://erlangen-crm.org/current/E32_Authority_document"
+                                                              ]
+                                                            }
+                                                          },
+                                                          {
+                                                            "type": "TripleConstraintSolutions",
+                                                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                            "solutions": [
+                                                              {
+                                                                "type": "TestedTriple",
+                                                                "subject": "http://example.org/afl_authorities",
+                                                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                                "object": {
+                                                                  "value": "authority_file"
+                                                                }
+                                                              }
+                                                            ],
+                                                            "valueExpr": {
+                                                              "type": "NodeConstraint",
+                                                              "values": [
+                                                                {
+                                                                  "value": "authority_file"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "valueExpr": {
+                                              "type": "ShapeRef",
+                                              "reference": "http://example.org/afl/Authority_document"
+                                            }
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://example.org/afl/value",
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://example.org/isni",
+                                                "predicate": "http://example.org/afl/value",
+                                                "object": {
+                                                  "value": "ISNI"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ],
+                            "valueExpr": {
+                              "type": "ShapeRef",
+                              "reference": "http://example.org/afl/Type"
+                            }
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://example.org/afl/value",
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "_:b25",
+                                "predicate": "http://example.org/afl/value",
+                                "object": {
+                                  "value": "0000 0003 8244 0415"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/ExternalStandardIdentifier"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P67i_is_refered_to_by",
+            "solutions": [],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/InternalStandardIdentifier"
+            },
+            "min": 0,
+            "max": -1
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://erlangen-crm.org/current/P70_is_documented",
+            "solutions": [],
+            "valueExpr": {
+              "type": "ShapeRef",
+              "reference": "http://example.org/afl/Document"
+            },
+            "min": 0,
+            "max": -1
+          }
+        ]
+      }
+    ]
+  }
+}
