@@ -1,0 +1,11 @@
+prefix crm:  <http://erlangen-crm.org/current/>
+prefix efr:  <http://erlangen-crm.org/efrbroo/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix :     <http://example.org/>
+prefix afl:  <http://example.org/afl/>
+prefix wdt:  <http://aflex.wiki.opencura.com/prop/direct/>
+
+select * where {
+  ?person wdt:P1 ?name
+}

@@ -1,0 +1,33 @@
+prefix crm:  <http://erlangen-crm.org/current/>
+prefix efr:  <http://erlangen-crm.org/efrbroo/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix :     <http://example.org/>
+prefix afl:  <http://example.org/afl/>
+prefix wdt:  <http://aflex.wiki.opencura.com/prop/direct/>
+
+construct {
+  ?person rdf:type crm:E21_Person ;
+    crm:P1_is_identified_by [
+     rdf:type crm:E82_Actor_appellation ;
+     efr:R8_consists_of [
+      rdf:type crm:E90_Symbolic_Object ;
+      rdfs:label "name"@en ;
+      crm:P2_has_type afl:direct ;
+      afl:value ?name 
+   ]
+  ] ;
+ crm:P1_is_identified_by [
+  rdf:type crm:E82_Actor_appellation ;
+  efr:R8_consists_of [ 
+   rdf:type crm:E90_Symbolic_Object ;
+   rdfs:label "title"@en ;
+   crm:P2_has_type afl:free_text ;
+   afl:value ?title 
+  ]
+ ] ;
+
+} where {
+  ?person wdt:P1 ?name ;
+          wdt:P4 ?title 
+}
